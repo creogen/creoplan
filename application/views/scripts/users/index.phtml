@@ -1,0 +1,53 @@
+<div id="idTopLine">
+    <ul class="ul-option-menu">
+        <li><a href="/projects/">Проекты</a></li>
+        <li><a href="/users/edit/">Создать пользователя</a></li>
+    </ul>
+</div>
+<div id="idBody">
+    <div class="cnt">
+        <div class="task-list">
+            <h1>Список проектов</h1>
+            <br/>
+            <table class="t-task-list">
+                <thead>
+                <tr>
+                    <th width="50%">Логин</th>
+                    <th width="10%">Роль</th>
+                    <th width="10%">Всего</th>
+                    <th width="15%">Не выполнено</th>
+                    <th width="15%">Действия</th>
+                </tr>
+                </thead>
+                <tbody>
+                <?php if (count($this->users)) { ?>
+                    <?php foreach ($this->users as $u) { ?>
+                        <tr>
+                            <td><?php echo $u->getLogin() ?></a></td>
+                            <td><?php echo $u->getRoleTitle() ?></td>
+                            <td><?php echo $u->getTotalTasks() ?></td>
+                            <td><?php echo $u->getNotComplete() ?></td>
+                            <td>
+                                <a href="/users/edit/id/<?php echo $u->getId() ?>/">Редактировать</a> |
+                                <a href="/users/drop/id/<?php echo $u->getId() ?>/" class="drop-user">Удалить</a>
+                            </td>
+                        </tr>
+                    <?php } ?>
+                <?php } else { ?>
+                    <tr>
+                        <td colspan="4" style="text-align: center;">Нет пользователей</td>
+                    </tr>
+                <?php } ?>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    $('.drop-user').click(function (e) {
+        e.preventDefault();
+        if (confirm('Удалить пользователя? (Пользователь не должен иметь задач и проектов)')) {
+            window.location.href = $(this).attr('href');
+        }
+    });
+</script>

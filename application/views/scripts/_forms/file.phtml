@@ -1,0 +1,10 @@
+<form method="post" action="/tasks/upload-file/" enctype="multipart/form-data">
+    <?php echo $this->element->id ?>
+    <fieldset>
+        <ul>
+            <li><?php echo $this->element->filename ?></li>
+            <li style="text-align: center;"><input type="submit" class="iSubmit" name="do_upload" value="Загрузить"/>
+            </li>
+        </ul>
+    </fieldset>
+</form>

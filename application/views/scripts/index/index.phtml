@@ -1,0 +1,67 @@
+<div id="idTopLine">
+    <ul class="ul-main-menu">
+        <li><a href="/projects/">Проекты</a></li>
+        <li><a href="/users/">Пользователи</a></li>
+    </ul>
+</div>
+<div id="idBody">
+    <div class="cnt">
+        <div class="task-list">
+            <h1>Текущие задачи</h1>
+
+            <div class="navi-menu">
+                <ul class="ul-nav-menu">
+                    <li>
+                        <a href="/tasks/index/filter/<?php echo $this->filter ?>/assigned/all/<?php echo $projectSuffix ?>">Все
+                            задания</a></li>
+                    <li>
+                        <a href="/tasks/index/filter/<?php echo $this->filter ?>/assigned/me/<?php echo $projectSuffix ?>">Только
+                            свои задания</a></li>
+                </ul>
+            </div>
+            <br/>
+            <table class="t-task-list">
+                <thead>
+                <tr>
+                    <th width="10%">Тип</th>
+                    <th width="5%">Приоритет</th>
+                    <th width="40%">Название</th>
+                    <th width="25%">Создано</th>
+                    <th width="25%">Начато</th>
+                    <th width="15%">Обрабатывает</th>
+                    <th width="25%">Завершено</th>
+                    <th width="15%">Статус</th>
+                </tr>
+                </thead>
+                <tbody>
+                <?php if (count($this->tasks)) { ?>
+                    <?php foreach ($this->tasks as $t) { ?>
+                        <tr>
+                            <td><?php echo $t->getTypeTitle() ?></td>
+                            <td class="<?php echo $t->getPriority() ?>">
+                                <?php echo $t->getPriorityTitle() ?>
+                            </td>
+                            <td>
+                                <a href="/tasks/view/id/<?php echo $t->getId() ?>/">
+                                    <?php echo $t->getTitle() ?>
+                                </a>
+                            </td>
+                            <td>
+                                <?php echo $t->getCreateDateFormatted() ?> &lt;- <?php echo $t->getCreatedByLogin() ?>
+                            </td>
+                            <td><?php echo $t->getStartDateFormatted() ?></td>
+                            <td><?php echo $t->getAssignedToLogin() ?></td>
+                            <td><?php echo $t->getEndDateFormatted() ?></td>
+                            <td><?php echo $t->getStatusTitle() ?></td>
+                        </tr>
+                    <?php } ?>
+                <?php } else { ?>
+                    <tr>
+                        <td colspan="8" style="text-align: center;">Нет заданий</td>
+                    </tr>
+                <?php } ?>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

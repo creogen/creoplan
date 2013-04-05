@@ -1,0 +1,44 @@
+<?php if ($this->element->getErrorMessages()) { ?>
+    <div class="error-message">
+        <h2>При сохранении задачи возникли ошибки</h2>
+
+        <p>Возникли проблемы со&nbsp;следующими полями:</p>
+        <ul>
+            <?php foreach ($this->element->getErrorMessages() as $error) { ?>
+                <li><?php echo $error ?></li>
+            <?php } ?>
+        </ul>
+    </div>
+<?php } ?>
+
+<form method="post" action="">
+    <fieldset>
+        <ul>
+            <li>
+                <label><?php echo $this->element->project_id->getLabel() ?></label>
+                <?php echo $this->element->project_id ?>
+            </li>
+            <li>
+                <label><?php echo $this->element->type->getLabel() ?></label>
+                <?php echo $this->element->type ?>
+            </li>
+            <li>
+                <label><?php echo $this->element->title->getLabel() ?></label>
+                <?php echo $this->element->title ?>
+            </li>
+            <li>
+                <label><?php echo $this->element->priority->getLabel() ?></label>
+                <?php echo $this->element->priority ?>
+            </li>
+            <li>
+                <label><?php echo $this->element->assigned_to->getLabel() ?></label>
+                <?php echo $this->element->assigned_to ?>
+            </li>
+            <li>
+                <label><?php echo $this->element->text->getLabel() ?></label>
+                <?php echo $this->element->text ?>
+            </li>
+            <li><input type="submit" name="do-create" id="do-create" class="iSubmit" value="Сохранить"/></li>
+        </ul>
+    </fieldset>
+</form>

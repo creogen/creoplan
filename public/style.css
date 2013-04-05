@@ -1,0 +1,326 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Georgia;
+}
+
+div, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    padding: 0;
+}
+
+a:link {
+    text-decoration: underline;
+    color: #0C568D;
+}
+
+a:visited {
+    color: #333;
+}
+
+a:hover, a:active {
+    text-decoration: none;
+    color: #8D0C3A;
+}
+
+fix {
+    overflow: hidden;
+    _height: 1%;
+}
+
+fix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+/* Login Form */
+#idLoginForm {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    width: 300px;
+    margin-left: -150px;
+    border: 5px solid #EDEDED;
+}
+
+/* Form */
+
+.form {
+    border: 1px solid #EDEDED;
+}
+
+fieldset {
+    border-width: 0;
+    margin: 0;
+    padding: 0;
+}
+
+fieldset ul {
+    list-style: none;
+}
+
+fieldset ul li {
+    padding: 5px 10px 5px 35px;
+}
+
+fieldset ul li label {
+    display: block;
+    padding: 5px 0px 3px 0px;
+    text-indent: -25px;
+}
+
+select, input, textarea {
+    font-size: 1em;
+    font-family: Georgia;
+}
+
+input.iButton {
+    padding: 0px 10px;
+/ / margin-top : - 1 px;
+/ / padding : - 2 px 0 px;
+    vertical-align: middle;
+}
+
+input.iSubmit {
+    padding: 10px;
+}
+
+/* TopLine */
+#idTopLine {
+    background-color: #FFF;
+}
+
+/* TopLine -> Main Menu */
+.ul-main-menu {
+    margin: 0px 25px;
+    padding: 10px 0px;
+    list-style: none;
+}
+
+.ul-main-menu li {
+    display: inline;
+    margin: 0 5px;
+}
+
+.ul-main-menu li a:link, .ul-main-menu li a:visited {
+    text-decoration: underline;
+    color: #0C568D;
+}
+
+.ul-main-menu li a:hover, .ul-main-menu li a:active {
+    text-decoration: none;
+    color: #8D0C3A;
+}
+
+.ul-option-menu {
+    float: right;
+    margin: 0px 25px;
+    padding: 10px 0px;
+    list-style: none;
+}
+
+.ul-option-menu li {
+    display: inline;
+    margin: 0 5px;
+}
+
+.ul-option-menu li a:link, .ul-option-menu li a:visited {
+    text-decoration: underline;
+    color: #0C568D;
+}
+
+.ul-option-menu li a:hover, .ul-option-menu li a:active {
+    text-decoration: none;
+    color: #8D0C3A;
+}
+
+/* Navigation Menu */
+.navi-menu {
+    background-color: #FFFFFF;
+    overflow: hidden;
+    _height: 1%;
+}
+
+.navi-menu:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.ul-nav-menu {
+    list-style: none;
+}
+
+.ul-nav-menu li {
+    display: block;
+    margin: 0px 10px;
+    float: right;
+    font-size: 0.8em;
+}
+
+/* Body */
+#idBody {
+    background-color: #FFF;
+}
+
+#idBody .cnt {
+    width: 80%;
+    margin: 25px auto;
+}
+
+/* Footer */
+#idFooter {
+    border-top: 1px solid #EDEDED;
+}
+
+.copyright {
+    font-size: 0.7em;
+    margin: 10px;
+    float: right;
+}
+
+/* Task List */
+.task-list {
+}
+
+.task-list h1 {
+    font-size: 1.5em;
+}
+
+.t-task-list {
+    border-collapse: collapse;
+    border: 1px solid #D2D5D9;
+    width: 100%;
+    background-color: #FFF;
+}
+
+.t-task-list td, .t-task-list th {
+    border: 1px solid #D2D5D9;
+}
+
+.t-task-list th {
+    font-size: 0.75em;
+    font-weight: bold;
+    text-align: center;
+    background-color: #EEEFF1;
+    padding: 10px 5px;
+}
+
+.t-task-list td {
+    font-size: 0.75em;
+    padding: 2px 5px;
+}
+
+.t-task-list .high {
+    background-color: #FFB5CF;
+}
+
+.t-task-list .middle {
+    background-color: #B5DFFF;
+}
+
+.t-task-list .low {
+    background-color: #FFFFFF;
+}
+
+/* Task */
+.task {
+    background-color: #FFF;
+    overflow: hidden;
+    _height: 1%;
+}
+
+.task:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.task-type {
+    float: left;
+    padding: 5px 10px 5px 0px;
+}
+
+.task h1 {
+    font-size: 1.5em;
+}
+
+.info {
+    float: right;
+    border: 1px solid #EFEFEF;
+    padding: 10px;
+    width: 250px;
+}
+
+.info h2 {
+    font-size: 1em;
+    color: #0C568D;
+}
+
+.info ul {
+    list-style: none;
+    margin: 10px 0px;
+}
+
+.info ul li {
+    padding: 2px 10px;
+    font-size: 0.8em;
+    color: #333333;
+}
+
+.info ul li big {
+    color: #0C568D;
+}
+
+.info span {
+    vertical-align: middle;
+}
+
+.info ol {
+    list-style: none;
+    margin: 10px 0;
+}
+
+.info ol li {
+    padding: 2px 10px 2px 10px;
+/ / padding-left : 50 px;
+    text-indent: -40px;
+    font-size: 0.8em;
+    color: #333333;
+}
+
+.entry {
+    padding: 0px 25px;
+    overflow: hidden;
+    _height: 1%;
+}
+
+.entry:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.entry p {
+    font-size: 1em;
+    line-height: 125%;
+}
+
+/* Task create */
+.task-create h1 {
+    font-size: 1.5em;
+}

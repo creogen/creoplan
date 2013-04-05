@@ -1,0 +1,17 @@
+<div id="idLoginForm">
+    <div class="form">
+        <form method="post" action="/login/">
+            <fieldset>
+                <ul>
+                    <li><label>Логин</label> <input type="text" class="iText" name="login" id="login" size="30"
+                                                    value="<?php echo $login = (!empty($_POST['login'])) ? htmlspecialchars($_POST['login']) : ''; ?>"/>
+                    </li>
+                    <li><label>Пароль</label> <input type="password" class="iText" name="password" id="password"
+                                                     size="30"/></li>
+                    <li style="text-align: center;"><input type="submit" class="iSubmit" name="do-login" id="do-login"
+                                                           value="Войти"/></li>
+                </ul>
+            </fieldset>
+        </form>
+    </div>
+</div>

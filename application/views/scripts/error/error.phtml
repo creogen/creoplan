@@ -1,0 +1,12 @@
+<div id="idBody">
+    <div class="cnt">
+        <div class="task-list">
+            <h1>Ошибка</h1>
+            <?php if (isset($this->exception)) { ?>
+                <p><?php echo $this->exception->getMessage() ?></p>
+            <?php } else { ?>
+                <p>Произошла ошибка. Вы можете попытаться повторить действие позже.</p>
+            <?php } ?>
+        </div>
+    </div>
+</div>
